@@ -2,7 +2,7 @@
   "devices": {
     "device:leaf1": {
       "basic": {
-        "managementAddress": "grpc://host.docker.internal:50001?device_id=1",
+        "managementAddress": "grpc://mininet:50001?device_id=1",
         "driver": "stratum-bmv2",
         "pipeconf": "org.onosproject.pipelines.fabric"
       },
@@ -19,7 +19,7 @@
     },
     "device:leaf2": {
       "basic": {
-        "managementAddress": "grpc://host.docker.internal:50002?device_id=1",
+        "managementAddress": "grpc://mininet:50002?device_id=1",
         "driver": "stratum-bmv2",
         "pipeconf": "org.onosproject.pipelines.fabric"
       },
@@ -36,7 +36,7 @@
     },
     "device:spine1": {
       "basic": {
-        "managementAddress": "grpc://host.docker.internal:50003?device_id=1",
+        "managementAddress": "grpc://mininet:50003?device_id=1",
         "driver": "stratum-bmv2",
         "pipeconf": "org.onosproject.pipelines.fabric"
       },
@@ -53,7 +53,7 @@
     },
     "device:spine2": {
       "basic": {
-        "managementAddress": "grpc://host.docker.internal:50004?device_id=1",
+        "managementAddress": "grpc://mininet:50004?device_id=1",
         "driver": "stratum-bmv2",
         "pipeconf": "org.onosproject.pipelines.fabric"
       },

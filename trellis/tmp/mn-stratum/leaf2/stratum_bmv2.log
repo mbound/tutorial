@@ -1,0 +1,50 @@
+stratum_bmv2 -device_id=1 -chassis_config_file=/tmp/leaf2/chassis-config.txt -forwarding_pipeline_configs_file=/tmp/leaf2/pipe.txt -persistent_config_dir=/tmp/leaf2 -initial_pipeline=/root/dummy.json -cpu_port=255 -external_stratum_urls=0.0.0.0:50002 -local_stratum_url=localhost:57863 -max_num_controllers_per_node=10 -write_req_log_file=/tmp/leaf2/write-reqs.txt -logtosyslog=false -logtostderr=true
+
+--------------------------------------------------------------------------------
+
+E0912 00:39:09.045619   103 main.cc:133] Starting bmv2 simple_switch and waiting for P4 pipeline
+I0912 00:39:09.049855   103 timer_daemon.cc:100] The timer daemon has been started.
+I0912 00:39:09.050097   103 hal.cc:136] Setting up HAL in COLDBOOT mode...
+I0912 00:39:09.051374   103 config_monitoring_service.cc:114] Pushing the saved chassis config read from /tmp/leaf2/chassis-config.txt...
+I0912 00:39:09.056946   103 bmv2_chassis_manager.cc:488] Registered port status callbacks successfully for node 1.
+I0912 00:39:09.057240   103 bmv2_chassis_manager.cc:73] Adding port 1 to node 1
+I0912 00:39:09.096933   103 bmv2_chassis_manager.cc:73] Adding port 2 to node 1
+I0912 00:39:09.132997   103 bmv2_chassis_manager.cc:73] Adding port 3 to node 1
+I0912 00:39:09.165041   103 bmv2_chassis_manager.cc:73] Adding port 4 to node 1
+I0912 00:39:09.202591   103 p4_service.cc:129] Pushing the saved forwarding pipeline configs read from /tmp/leaf2/pipe.txt...
+E0912 00:39:09.202903   103 utils.cc:119] StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/leaf2/pipe.txt not found.
+E0912 00:39:09.203305   103 utils.cc:75] Return Error: ReadFileToString(filename, &text) failed with StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/leaf2/pipe.txt not found.
+W0912 00:39:09.203523   103 p4_service.cc:138] No saved forwarding pipeline config found at /tmp/leaf2/pipe.txt. This is normal when the switch is just installed and no master controller is connected yet.
+E0912 00:39:09.204426736     103 server_chttp2.cc:40]        {"created":"@1568248749.204403695","description":"Only 1 addresses added out of total 2 resolved","file":"external/com_github_grpc_grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":357,"referenced_errors":[{"created":"@1568248749.204401570","description":"Address family not supported by protocol","errno":97,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/socket_utils_common_posix.cc","file_line":383,"os_error":"Address family not supported by protocol","syscall":"socket","target_address":"[::1]:57863"}]}
+E0912 00:39:09.204749   103 hal.cc:225] Stratum external facing services are listening to 0.0.0.0:50002, localhost:57863...
+I0912 00:39:09.251497   155 bmv2_chassis_manager.cc:421] State of port 1 in node 1: UP.
+I0912 00:39:09.251897   155 bmv2_chassis_manager.cc:421] State of port 2 in node 1: UP.
+I0912 00:39:09.252178   155 bmv2_chassis_manager.cc:421] State of port 3 in node 1: UP.
+I0912 00:39:09.252396   155 bmv2_chassis_manager.cc:421] State of port 4 in node 1: UP.
+I0912 00:42:48.765641   189 p4_service.cc:698] Controller (connection_id: 1, election_id: 20, uri: ipv4:172.19.0.3:37378) is connected as MASTER for node (aka device) with ID 1.
+I0912 00:42:48.831562   189 p4_service.cc:698] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.19.0.3:37378) is connected as MASTER for node (aka device) with ID 1.
+I0912 00:42:48.872884   189 p4_service.cc:698] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.19.0.3:37378) is connected as MASTER for node (aka device) with ID 1.
+[00:42:48.970] [bmv2] [W] [thread 205] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
+I0912 00:42:49.027959   189 p4_service.cc:698] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.19.0.3:37378) is connected as MASTER for node (aka device) with ID 1.
+I0912 00:42:49.031224   205 bmv2_switch.cc:86] P4-based forwarding pipeline config pushed successfully to node with ID 1.
+E0912 00:42:49.119586   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.120708   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.121732   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.122045   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.123268   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.123515   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.124392   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.124660   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.125844   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.126686   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.127640   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.127895   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.128531   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.128949   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.130154   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.130416   190 bmv2_switch.cc:201] StratumErrorSpace::ERR_INTERNAL: Not supported yet
+E0912 00:42:49.134183   190 yang_parse_tree_paths.cc:97] StratumErrorSpace::ERR_INTERNAL: Writing response to stream failed: sync_response: true
+E0912 00:42:49.134447   190 yang_parse_tree.cc:70] Return Error: (this->*handler)(event, path, stream) failed with StratumErrorSpace::ERR_INTERNAL: Writing response to stream failed: sync_response: true. 
+E0912 00:42:49.134691   190 gnmi_publisher.cc:126] Handler returned non-OK status: StratumErrorSpace::ERR_INTERNAL: Writing response to stream failed: sync_response: true. 
+I0912 00:42:49.177772   189 p4_service.cc:698] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.19.0.3:37378) is connected as MASTER for node (aka device) with ID 1.
+I0912 00:42:49.238874   211 config_monitoring_service.cc:399] Initial Subscribe request from ipv4:172.19.0.3:37390 over stream 0x7fd1c41f44e0.
